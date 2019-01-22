@@ -1,6 +1,9 @@
 The Gradle team is excited to announce Gradle 5.2.
 
-This release features [1](), [2](), ... [n](), and more.
+This release features the [Java Platform plugin](userguide/java_platform_plugin.html) which allows users to declare and publish platforms including as BOMs, [official support for additional Windows native toolchains](userguide/native_software.html#native-binaries:tool-chain-support), and more.
+
+Read the [Gradle 5.x upgrade guide](userguide/upgrading_version_5.html) to learn about breaking changes and considerations for upgrading from Gradle 5.0. If upgrading from Gradle 4.x, please read 
+[upgrading from Gradle 4.x to 5.0](userguide/upgrading_version_4.html) first. Users upgrading from 5.1, should not have to worry about breaking changes.
 
 We would like to thank the following community contributors to this release of Gradle:
 
@@ -18,20 +21,6 @@ Switch your build to use Gradle 5.2 by updating your wrapper properties:
 `./gradlew wrapper --gradle-version=5.2`
 
 Standalone downloads are available at [gradle.org/release-candidate](https://gradle.org/release-candidate). 
-
-## Improvements for plugin authors 
-
-### Service injection into project extensions
-
-There are several [useful services](userguide/custom_tasks.html#service_injection) that Gradle makes available for task and plugin implementations to use. Previously, these were available for injection into task and plugin instances. In this Gradle release these services are also available for injection directly into project extensions. Using this can help simplify your plugin implementation.
-
-See the [User Manual](userguide/custom_plugins.html#service_injection) for details.
-
-TBD - can have abstract service getter
-
-TBD - can use server getter on plugins
-
-TBD - can use service injection on `project.container(Class)` elements 
 
 ## The Java Platform plugin
 
@@ -65,9 +54,18 @@ This release includes some improvements to Gradle's console integration on Windo
 
 The implementation of the rich console has been improved to remove some distracting visual artifacts on Windows. 
 
+## Improvements for plugin authors 
+
+### Service injection into project extensions
+
+Previously, Gradle supported [service injection into tasks](userguide/custom_tasks.html#service_injection) and [service injection into plugins](userguide/custom_plugins.html#service_injection). In 
+this Gradle release, these services are also available for injection directly into project extensions. Using this can help simplify your plugin implementation.
+
+See the [user manual](userguide/custom_plugins.html#service_injection) for details.
+
 ## Support for setting environment variables when using Gradle TestKit
   
-Gradle [TestKit](userguide/test_kit.html) based tests can now specify environment variables via [`GradleRunner`](javadoc/org/gradle/testkit/runner/GradleRunner.html). These environemnt variables will be visible to the build under test.
+Gradle [TestKit](userguide/test_kit.html) based tests can now specify environment variables via [`GradleRunner`](javadoc/org/gradle/testkit/runner/GradleRunner.html). These environment variables will be visible to the build under test.
 
 Contributed by [Szczepan Faber](https://github.com/mockitoguy).
 

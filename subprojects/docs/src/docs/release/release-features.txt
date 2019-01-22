@@ -1,0 +1,3 @@
+- the Java Platform plugin which allows users to declare and publish platforms including as BOMs
+- official support for additional Windows native toolchains
+
