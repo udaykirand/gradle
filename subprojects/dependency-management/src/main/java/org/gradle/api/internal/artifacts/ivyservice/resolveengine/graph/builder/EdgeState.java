@@ -186,7 +186,7 @@ class EdgeState implements DependencyGraphEdge {
             if (isConstraint) {
                 attributes = selector.getTargetModule().mergeConstraintAttributesWithHardDependencyAttributes(attributes);
             }
-            targetConfigurations = dependencyMetadata.selectConfigurations(attributes, targetModuleVersion, resolveState.getAttributesSchema());
+            targetConfigurations = dependencyMetadata.selectConfigurations(attributes, targetModuleVersion, resolveState.getAttributesSchema(), dependencyState.getRequested().getRequestedCapabilities());
         } catch (Exception t) {
             // Failure to select the target variant/configurations from this component, given the dependency attributes/metadata.
             targetNodeSelectionFailure = new ModuleVersionResolveException(dependencyState.getRequested(), t);
