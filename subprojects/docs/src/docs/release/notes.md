@@ -1,4 +1,4 @@
-The Gradle team is excited to announce Gradle 5.3.
+The Gradle team is excited to announce Gradle {gradleVersion}.
 
 This release features [1](), [2](), ... [n](), and more.
 
@@ -8,17 +8,23 @@ Include only their name, impactful features should be called out separately belo
  [Some person](https://github.com/some-person)
 -->
 
-## Improvements for plugin authors
+<!-- 
+## 1
 
-TBD - Abstract service injection getter methods
-TBD - Abstract mutable property
-TBD - Use an interface for Gradle instantiated types
+details of 1
+
+## 2
+
+details of 2
+
+## n
+-->
 
 ## Upgrade Instructions
 
-Switch your build to use Gradle 5.3 by updating your wrapper properties:
+Switch your build to use Gradle {gradleVersion} by updating your wrapper properties:
 
-`./gradlew wrapper --gradle-version=5.3`
+`./gradlew wrapper --gradle-version={gradleVersion}`
 
 Standalone downloads are available at [gradle.org/releases](https://gradle.org/releases). 
 
@@ -53,7 +59,7 @@ The following are the newly deprecated items in this Gradle release. If you have
 
 <!-- summary and links -->
 
-See the [Gradle 5.x upgrade guide](userguide/upgrading_version_5.html#changes_5.3) to learn about breaking changes and considerations when upgrading to Gradle 5.3.
+See the [Gradle 5.x upgrade guide](userguide/upgrading_version_5.html#changes_{gradleVersion}) to learn about breaking changes and considerations when upgrading to Gradle {gradleVersion}.
 
 <!-- Do not add breaking changes here! Add them to the upgrade guide instead. --> 
 
